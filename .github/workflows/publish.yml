@@ -1,0 +1,62 @@
+# ============================================================
+# labos-blog — iiaHUB 自動發布 Agent (艦隊第四棒)
+# 觸發:1) labos-notify 推播完成後的 repository_dispatch (即時)
+#       2) 每天台北 11:00 排程 (保險:接力棒沒到也會補發布)
+#       3) 手動 workflow_dispatch
+# 動作:抓 labos-evaluation 的最新日報 → builder 重建 → push docs/
+#       → GitHub Pages 自動更新
+# Secrets:FLEET_TOKEN (讀私有 labos-evaluation 用)
+# ============================================================
+name: Publish iiaHUB
+
+on:
+  repository_dispatch:
+    types: [publish-blog]
+  schedule:
+    - cron: '0 3 * * *'   # UTC 03:00 = 台北 11:00 (排程表 Slot B)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 🏃 Pull latest reports from labos-evaluation
+        env:
+          GH_TOKEN: ${{ secrets.FLEET_TOKEN }}
+          SRC: ${{ github.repository_owner }}/labos-evaluation
+        run: |
+          mkdir -p posts
+          names=$(gh api "repos/$SRC/contents/data/reports" \
+                    --jq '.[].name' 2>/dev/null || true)
+          if [ -z "$names" ]; then
+            echo "⚠️ 讀不到日報 (FLEET_TOKEN 未涵蓋 labos-evaluation?或還沒有日報)"
+          fi
+          for f in $names; do
+            if [ ! -f "posts/$f" ]; then
+              gh api "repos/$SRC/contents/data/reports/$f" \
+                -H "Accept: application/vnd.github.raw" > "posts/$f"
+              echo "  📥 新文章:$f"
+            fi
+          done
+
+      - name: Build iiaHUB site
+        run: python builder.py
+
+      - name: Commit & push (Pages 自動部署)
+        run: |
+          git config user.name  "labos-bot"
+          git config user.email "labos-bot@users.noreply.github.com"
+          git add posts docs
+          git diff --cached --quiet && echo "沒有新內容" && exit 0
+          git commit -m "📰 iiaHUB auto publish: run ${{ github.run_id }}"
+          git pull --rebase origin main || true
+          git push
+          echo "🌐 https://${{ github.repository_owner }}.github.io/labos-blog/"
