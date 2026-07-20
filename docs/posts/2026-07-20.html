@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lab OS 研究日報 2026-07-20 · iiaHUB</title>
+<style>
+:root{color-scheme:light;--page:#f9f9f7;--surface:#fcfcfb;--ink:#0b0b0b;
+ --ink2:#52514e;--muted:#898781;--grid:#e1e0d9;--accent:#2a78d6;
+ --border:rgba(11,11,11,.1)}
+@media (prefers-color-scheme:dark){:root{color-scheme:dark;--page:#0d0d0d;
+ --surface:#1a1a19;--ink:#fff;--ink2:#c3c2b7;--muted:#898781;--grid:#2c2c2a;
+ --accent:#3987e5;--border:rgba(255,255,255,.1)}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);line-height:1.75;
+ font-family:system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif}
+.wrap{max-width:880px;margin:0 auto;padding:0 18px 60px}
+header.site{padding:34px 0 6px}
+header.site h1{margin:0;font-size:26px}
+header.site h1 a{color:var(--ink);text-decoration:none}
+header.site p{margin:6px 0 0;color:var(--muted);font-size:13.5px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px}
+.chip{border:1px solid var(--border);background:var(--surface);
+ color:var(--ink2);border-radius:999px;padding:3px 13px;font-size:13px;
+ cursor:pointer;user-select:none}
+.chip.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+ gap:16px;margin-top:14px}
+.card{background:var(--surface);border:1px solid var(--border);
+ border-radius:14px;overflow:hidden;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 22px rgba(0,0,0,.12)}
+.card a{color:inherit;text-decoration:none}
+.card .cover{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;
+ background:var(--grid)}
+.card .body{padding:12px 15px 15px}
+.card .date{font-size:12px;color:var(--muted)}
+.card h2{font-size:16.5px;margin:4px 0 8px;line-height:1.45}
+.card .tags{display:flex;flex-wrap:wrap;gap:5px}
+.card .tag{font-size:11px;color:var(--accent);border:1px solid var(--border);
+ border-radius:999px;padding:1px 8px}
+article{background:var(--surface);border:1px solid var(--border);
+ border-radius:16px;padding:28px clamp(18px,4vw,44px);margin-top:16px}
+article img{max-width:100%;border-radius:10px}
+article h1{font-size:26px;line-height:1.4}
+article h2{font-size:20px;border-bottom:1px solid var(--grid);
+ padding-bottom:6px;margin-top:34px}
+article h3{font-size:16.5px;margin-top:26px}
+article a{color:var(--accent)}
+article code{background:var(--page);border:1px solid var(--border);
+ border-radius:6px;padding:1px 6px;font-size:.88em}
+article blockquote{border-left:3px solid var(--accent);margin:0;
+ padding:2px 16px;color:var(--ink2)}
+.postmeta{color:var(--muted);font-size:13px;margin:14px 0 0}
+.backlink{display:inline-block;margin:22px 0 0;color:var(--accent);
+ text-decoration:none;font-size:14px}
+footer{margin-top:44px;color:var(--muted);font-size:12.5px;text-align:center}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.0/marked.min.js"></script></head>
+<body><div class="wrap">
+<header class="site"><h1><a href="../index.html">⬡ iiaHUB</a></h1></header>
+<article>
+  <div class="postmeta">2026-07-20&ensp;<span class="card">
+  </span><span class="tags" style="display:inline-flex;gap:5px"><span class="tag">#bim-llm</span> <span class="tag">#computational-design</span> <span class="tag">#ai-benchmark</span> <span class="tag">#ifc-standard</span> <span class="tag">#natural-language-interface</span> <span class="tag">#robotics</span> <span class="tag">#bim-integration</span> <span class="tag">#slam</span> <span class="tag">#digital-twin</span> <span class="tag">#construction-tech</span> <span class="tag">#bim</span> <span class="tag">#knowledge-graph</span></span></div>
+  <div id="content"></div>
+</article>
+<a class="backlink" href="../index.html">← 回到全部文章</a> <a class="backlink" style="float:right" href="2026-07-19.html">較舊:Lab OS 研究日報 2026-07-… →</a>
+<footer>由 Lab OS Blog Builder 自動生成</footer>
+</div>
+<script type="text/plain" id="md">![今日焦點](https://images.adsttc.com/media/images/6a59/23d7/d425/1a00/01c4/bc00/medium_jpg/Tadu_MercadoCentral_16.jpg)
+
+# Lab OS 研究日報 2026-07-20
+
+論文 **6** 篇(keep 6 / hold 0 / drop 0)|ArchDaily 焦點建築 **3** 座
+
+## 🏛 建築 — 關鍵字「building information modeling」
+
+### [BIM-Edit: Benchmarking Large Language Models for IFC-Based Building Information Modeling](https://arxiv.org/abs/2606.20146v3)
+
+`#bim-llm` `#computational-design` `#ai-benchmark` `#ifc-standard` `#natural-language-interface`
+
+**[keep]** 新穎 8.0 / 跨域 9.0 · 2026-06-18 · Bharathi Kannan Nithyanantham, Clemens Kujat, Tobias Sesterhenn 等
+
+- **研究問題**:如何評估大型語言模型 (LLMs) 在使用自然語言指令編輯現有、複雜且具語意結構的建築資訊模型 (BIM/IFC) 時的能力與限制？
+- **相關理論**:論文對話於當前 LLM 在電腦輔助設計 (CAD) 中的應用研究，指出既有基準測試多偏向「從無到有的幾何生成」，缺乏對「編輯既有模型」且需維持「語意與拓樸一致性」的工程實務考量。
+- **研究方法**:建立了一個名為 BIM-Edit 的基準測試集，包含基於真實與合成 IFC 模型的 324 個編輯任務。任務指令分為直接、空間和拓樸三種類型，並從幾何準確性、語意有效性和拓樸一致性三個維度評估 LLM 的表現。
+- **研究結論**:當前 LLM 在處理結構化工程設計流程的需求上存在巨大落差，表現最好的模型平均得分僅 49.5%，且完全解決的任務不到 3.4%，顯示模型難以處理涉及隱晦空間與拓樸關係的複雜編輯指令。
+
+### [BIM-Loc: BIM-Integrated Discrepancy-Aware LiDAR-based Indoor Localization](https://arxiv.org/abs/2606.14237v1)
+
+`#robotics` `#bim-integration` `#slam` `#digital-twin` `#construction-tech`
+
+**[keep]** 新穎 7.0 / 跨域 8.0 · 2026-06-12 · Yinqiang Zhang, Liang Lu, Yipeng Pan 等
+
+- **研究問題**:如何在室內特徵稀疏且「設計模型」(BIM) 與「實際場景」存在差異的情況下，實現精確且穩健的機器人即時定位並同時識別這些差異？
+- **相關理論**:建立在基於地圖先驗的定位技術 (localization with map priors) 之上，對話了利用點雲地圖、2D 平面圖和 3D BIM 進行定位的現有文獻，特別針對 BIM「設計狀態」與現實不符的挑戰。
+- **研究方法**:提出 BIM-Loc 系統，結合了用於高效 BIM 數據關聯的新型多重射線投射策略、整合 BIM 結構因子的姿態圖優化框架 (PGO)，以及一個用於在線檢測表面差異的分層貝葉斯推理模組。
+- **研究結論**:BIM-Loc 能在與 BIM 座標系對齊的同時即時估計軌跡並識別現實與設計模型間的差異，實驗證明其在準確性和穩健性上顯著優於現有基於地圖的方法。
+
+### [Automating Geometry-Intensive Compliance Checking in BIM: Graph-Based Semantic Reasoning Framework](https://arxiv.org/abs/2606.12065v1)
+
+`#bim` `#knowledge-graph` `#llm-application` `#automated-reasoning` `#spatial-computation`
+
+**[keep]** 新穎 7.0 / 跨域 8.0 · 2026-06-10 · Zixuan Xiao, Pei Troh Koh, Jun Ma 等
+
+- **研究問題**:如何解決 BIM 自動法規檢查中，現有方法難以處理涉及多跳躍推理鏈和隱含空間依賴的「幾何密集型」規範（如消防法規）的問題？
+- **相關理論**:本文對話於現有的自動法規檢查 (ACC) 文獻，指出基於靜態規則模板、本體論推理及早期 LLM 應用在處理動態、上下文相關的幾何規範時的局限性。
+- **研究方法**:提出一個名為 SGR-BIM 的圖驅動推理框架，動態構建對齊用戶意圖、法規語義和 BIM 幾何的跨模態知識圖譜，並結合 LLM 進行可解釋的語義推理，以 679 個消防規範查詢進行驗證。
+- **研究結論**:SGR-BIM 框架在複雜幾何法規檢查的準確率達到 84.3%，優於基線模型，證明了基於圖譜的語義推理範式能提升自動化檢查的透明度與靈活性。
+
+## 🤖 AI — 關鍵字「vision language model」
+
+### [How Do VLMs Fail? Vision-Operation Misalignment in Compositional VQA](https://arxiv.org/abs/2607.16094v1)
+
+`#mechanistic-interpretability` `#vision-language-models` `#spatial-reasoning` `#ai-grounding` `#failure-analysis`
+
+**[keep]** 新穎 8.0 / 跨域 7.0 · 2026-07-17 · Navya Gupta, Bingjie Xu, Avinash Anand 等
+
+- **研究問題**:視覺語言模型 (VLMs) 在處理需要多步驟推理的組合式視覺問答 (Compositional VQA) 任務時，其失敗的內在機制是什麼？這些失敗如何對應到特定的推理操作和內部計算路徑？
+- **相關理論**:本文對話於視覺語言模型的機制可解釋性 (mechanistic interpretability) 研究，特別是針對 Transformer 架構的因果介入方法 (如 causal ablation, attention knockout)，並探討了符號落地 (symbol grounding) 與語言捷徑 (linguistic shortcuts) 的理論問題。
+- **研究方法**:提出一個「以操作為中心的機制框架」，利用跨 Transformer 層的因果介入技術（如注意力阻斷），分析不同類型的推理失敗（如物件定位、屬性提取、空間關係）對應到模型內部的哪些計算路徑（如前饋網絡或注意力機制）。
+- **研究結論**:揭示了四種機制上截然不同的失敗模式（落地失敗、推理失敗、屬性提取失敗、語言先驗主導失敗），並證明不同的失敗類型通過不同的內部計算路徑傳播，這意味著需要針對性的修正策略。
+
+### [Vision-Language Assistant for Emotional Reactions to Risky Driving](https://arxiv.org/abs/2607.16181v1)
+
+`#human-ai-interaction` `#affective-computing` `#vision-language-models` `#autonomous-driving-ux`
+
+**[keep]** 新穎 6.0 / 跨域 7.0 · 2026-07-17 · Harine Choi, Eun Hak Lee, Zhengzhong Tu
+
+- **研究問題**:如何開發一種結合視覺感知與大型語言模型的車載助理，使其能即時偵測危險駕駛行為，並根據駕駛偏好生成具情感表達的口語反應，以提升安全感與舒適度？
+- **相關理論**:本研究建立在自動駕駛感知技術、情感計算 (Affective Computing) 以及人機互動 (HCI) 中關於同理心車載系統與情緒調節的研究脈絡上。
+- **研究方法**:提出「Keep Yelling Assistant (KYA)」框架，包含使用 YOLOv8 偵測危險行為的視覺模組，以及利用大型語言模型 (如 ChatGPT-4o) 根據用戶設定的情感基調生成回應的語言模組，並透過 108 人的使用者研究評估其效果。
+- **研究結論**:KYA 系統能有效整合即時道路感知與情感適應性對話，使用者研究顯示結合 YOLOv8s 與 ChatGPT-4o 的組合獲得最高評價，證實了情感智慧型車載 AI 改善駕駛體驗與信任感的潛力。
+
+### [Attention-Guided Saliency Maps for Interpreting Visualization Literacy in VLMs](https://arxiv.org/abs/2607.16105v1)
+
+`#explainable-ai` `#vision-language-models` `#data-visualization` `#ai-epistemology`
+
+**[keep]** 新穎 7.0 / 跨域 6.0 · 2026-07-17 · Maeve Hutchinson, Abderrahmane Wassim Mehdaoui, Pranava Madhyastha
+
+- **研究問題**:如何驗證視覺語言模型 (VLMs) 在回答圖表問題時，是真正關注到正確的視覺元素並進行視覺推理，而非僅依賴文字偏差或記憶捷徑？
+- **相關理論**:本文對話於資料視覺化素養 (Visualization Literacy) 的評估研究，指出當前圖表問答 (CQA) 基準測試僅看重準確率的局限性，並延伸了可解釋 AI (XAI) 中顯著性圖 (Saliency Maps) 的技術脈絡。
+- **研究方法**:提出一種輕量級、無梯度的顯著性圖方法，專為 Transformer 架構的 VLM 設計。它聚合語言模型在生成答案 token 時對視覺 token 的注意力，並將其映射回影像區塊網格，以視覺化模型關注的區域。
+- **研究結論**:成功開發了一種針對 VLM 的 token 級注意力引導顯著性提取方法，並透過刪除指標驗證了其因果忠實度，揭示了模型在生成答案時如何分配視覺焦點，提供了比單純準確率更深層的評估工具。
+
+## 🏙 ArchDaily 焦點建築
+
+### [Mercado Central / Tadu Arquitetura](https://www.archdaily.com/1148943/mercado-central-tadu-arquitetura)
+
+**建築師**:Tadu Arquitetura | **所在地**:Rio de Janeiro (-22.9068467, -43.1728965) | **機能**:hospitality architecture
+
+Completed in 2026 in Rio de Janeiro, Brazil. Images by Rafael Salim. Mercado Central: heritage, culture, and new uses in downtown Rio. Housed in a complex of five historic buildings that once home to the first Granado...
+
+![Mercado Central / Tadu Arquitetura 1](https://images.adsttc.com/media/images/6a59/23d7/d425/1a00/01c4/bc00/medium_jpg/Tadu_MercadoCentral_16.jpg)
+![Mercado Central / Tadu Arquitetura 2](https://images.adsttc.com/media/images/6a59/23d4/d425/1a00/01c4/bbf6/newsletter/Tadu_MercadoCentral_1.jpg)
+![Mercado Central / Tadu Arquitetura 3](https://images.adsttc.com/media/images/6a59/23d6/d425/1a00/01c4/bbfd/medium_jpg/Tadu_MercadoCentral_12.jpg)
+
+### [De Jonghe Residence Restoration / Michel Architects](https://www.archdaily.com/1181271/de-jonghe-residence-restoration-michel-architects)
+
+**建築師**:Michel Architects | **所在地**:Los Angeles (34.0536909, -118.2427660) | **機能**:residential architecture
+
+Completed in 2025 in Los Angeles, United States. Images by Sean Hazen. Designed by Lloyd Wright in 1959, the De Jonghe Residence sits in the hills of Los Angeles with a quiet authority. Board-formed concrete, deep...
+
+![De Jonghe Residence Restoration / Michel Architects 1](https://images.adsttc.com/media/images/6a5e/1112/895c/1800/0111/7cf7/medium_jpg/SeanHazen_1.jpg)
+![De Jonghe Residence Restoration / Michel Architects 2](https://images.adsttc.com/media/images/6a5e/1113/895c/1800/0111/7cfc/medium_jpg/SeanHazen_11.jpg)
+![De Jonghe Residence Restoration / Michel Architects 3](https://images.adsttc.com/media/images/6a5e/1114/895c/1800/0111/7d01/medium_jpg/SeanHazen_132.jpg)
+
+### [Stadtforum in Dresden / Tchoban Voss Architekten](https://www.archdaily.com/1148794/stadtforum-in-dresden-tchoban-voss-architekten)
+
+**建築師**:Tchoban Voss Architekten | **所在地**:Dresden (51.0469079, 13.7399478) | **機能**:public architecture
+
+Completed in 2025 in Dresden, Germany. Images by Klemens Renner. During redevelopment of the area around the historical Ferdinandplatz in the center of Dresden, the first prize in a design competition held for...
+
+![Stadtforum in Dresden / Tchoban Voss Architekten 1](https://images.adsttc.com/media/images/6a58/a38f/d425/1a00/01c4/b9df/medium_jpg/6867_Stadtforum_Dresden_125119_c_Klemens_Renner.jpg)
+![Stadtforum in Dresden / Tchoban Voss Architekten 2](https://images.adsttc.com/media/images/6a58/a38e/d425/1a00/01c4/b9d5/newsletter/6867_Stadtforum_Dresden_1262038_c_Klemens_Renner.jpg)
+![Stadtforum in Dresden / Tchoban Voss Architekten 3](https://images.adsttc.com/media/images/6a58/a38d/d425/1a00/01c4/b9d1/medium_jpg/6867_Stadtforum_Dresden_1251750_c_Klemens_Renner.jpg)
+
+---
+
+*由 Lab OS 自動生成|PDF/RIS 典藏見 Google Drive「LabOS文獻庫」*</script>
+<script>
+  const raw = document.getElementById('md').textContent;
+  document.getElementById('content').innerHTML = marked.parse(raw);
+</script>
+</body></html>
