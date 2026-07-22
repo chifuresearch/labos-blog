@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lab OS 研究日報 2026-07-22 · iiaHUB</title>
+<style>
+:root{color-scheme:light;--page:#f9f9f7;--surface:#fcfcfb;--ink:#0b0b0b;
+ --ink2:#52514e;--muted:#898781;--grid:#e1e0d9;--accent:#2a78d6;
+ --border:rgba(11,11,11,.1)}
+@media (prefers-color-scheme:dark){:root{color-scheme:dark;--page:#0d0d0d;
+ --surface:#1a1a19;--ink:#fff;--ink2:#c3c2b7;--muted:#898781;--grid:#2c2c2a;
+ --accent:#3987e5;--border:rgba(255,255,255,.1)}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);line-height:1.75;
+ font-family:system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif}
+.wrap{max-width:880px;margin:0 auto;padding:0 18px 60px}
+header.site{padding:34px 0 6px}
+header.site h1{margin:0;font-size:26px}
+header.site h1 a{color:var(--ink);text-decoration:none}
+header.site p{margin:6px 0 0;color:var(--muted);font-size:13.5px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px}
+.chip{border:1px solid var(--border);background:var(--surface);
+ color:var(--ink2);border-radius:999px;padding:3px 13px;font-size:13px;
+ cursor:pointer;user-select:none}
+.chip.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+ gap:16px;margin-top:14px}
+.card{background:var(--surface);border:1px solid var(--border);
+ border-radius:14px;overflow:hidden;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 22px rgba(0,0,0,.12)}
+.card a{color:inherit;text-decoration:none}
+.card .cover{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;
+ background:var(--grid)}
+.card .body{padding:12px 15px 15px}
+.card .date{font-size:12px;color:var(--muted)}
+.card h2{font-size:16.5px;margin:4px 0 8px;line-height:1.45}
+.card .tags{display:flex;flex-wrap:wrap;gap:5px}
+.card .tag{font-size:11px;color:var(--accent);border:1px solid var(--border);
+ border-radius:999px;padding:1px 8px}
+article{background:var(--surface);border:1px solid var(--border);
+ border-radius:16px;padding:28px clamp(18px,4vw,44px);margin-top:16px}
+article img{max-width:100%;border-radius:10px}
+article h1{font-size:26px;line-height:1.4}
+article h2{font-size:20px;border-bottom:1px solid var(--grid);
+ padding-bottom:6px;margin-top:34px}
+article h3{font-size:16.5px;margin-top:26px}
+article a{color:var(--accent)}
+article code{background:var(--page);border:1px solid var(--border);
+ border-radius:6px;padding:1px 6px;font-size:.88em}
+article blockquote{border-left:3px solid var(--accent);margin:0;
+ padding:2px 16px;color:var(--ink2)}
+.postmeta{color:var(--muted);font-size:13px;margin:14px 0 0}
+.backlink{display:inline-block;margin:22px 0 0;color:var(--accent);
+ text-decoration:none;font-size:14px}
+footer{margin-top:44px;color:var(--muted);font-size:12.5px;text-align:center}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.0/marked.min.js"></script></head>
+<body><div class="wrap">
+<header class="site"><h1><a href="../index.html">⬡ iiaHUB</a></h1></header>
+<article>
+  <div class="postmeta">2026-07-22&ensp;<span class="card">
+  </span><span class="tags" style="display:inline-flex;gap:5px"><span class="tag">#bim-robotics</span> <span class="tag">#agent-based-simulation</span> <span class="tag">#knowledge-driven-systems</span> <span class="tag">#cross-domain-integration</span> <span class="tag">#bim</span> <span class="tag">#generative-ai</span> <span class="tag">#structured-data</span> <span class="tag">#domain-specific-llm</span> <span class="tag">#workflow-automation</span> <span class="tag">#building-energy-modeling</span> <span class="tag">#computational-design</span> <span class="tag">#optimization-algorithms</span></span></div>
+  <div id="content"></div>
+</article>
+<a class="backlink" href="../index.html">← 回到全部文章</a> <a class="backlink" style="float:right" href="2026-07-21.html">較舊:Lab OS 研究日報 2026-07-… →</a>
+<footer>由 Lab OS Blog Builder 自動生成</footer>
+</div>
+<script type="text/plain" id="md">![今日焦點](https://images.adsttc.com/media/images/6a5e/756a/895c/1800/0111/7fb3/medium_jpg/IMG_1534.jpg)
+
+# Lab OS 研究日報 2026-07-22
+
+論文 **9** 篇(keep 7 / hold 1 / drop 1)|ArchDaily 焦點建築 **3** 座
+
+## 🏛 建築 — 關鍵字「building information modeling」
+
+### [Ishigaki-IDS: An Open-Weight Verifier-Aware Model for Information Delivery Specification Drafting in Building Information Modeling](https://arxiv.org/abs/2606.08545v1)
+
+`#bim` `#generative-ai` `#structured-data` `#domain-specific-llm` `#workflow-automation`
+
+**[keep]** 新穎 8.0 / 跨域 7.0 · 2026-06-07 · Ryo Kanazawa, Koyo Hidaka, Teppei Miyamoto 等
+
+- **研究問題**:如何利用大型語言模型自動化生成符合建築資訊模型 (BIM) 標準且能通過外部驗證器檢查的資訊交付規範 (IDS) 草稿，以解決人工編寫 IDS 的技術瓶頸？
+- **相關理論**:本文建立在建築資訊模型 (BIM)、工業基礎類別 (IFC) 數據標準以及資訊交付規範 (IDS) 的基礎上，並對話了大型語言模型的結構化生成 (structured generation) 與驗證器感知學習 (verifier-aware learning) 等 AI 技術文獻。
+- **研究方法**:開發了一個名為 Ishigaki-IDS 的專用 LLM，其訓練過程包含：在 BIM/IDS 語料庫上持續預訓練、使用「需求文本-IDS代碼」對進行監督微調，以及利用外部驗證器 (IDSAuditTool) 的通過與否作為獎勵信號進行強化學習。
+- **研究結論**:Ishigaki-IDS 在生成可通過驗證的 IDS XML 文件方面顯著優於通用 LLM (如 Claude Opus)，並在實際從業者的工作流程測試中減少了 54.7% 的總工作時間，證明了驗證器感知生成能有效輔助 IDS 草稿編寫。
+
+### [A BIM-enabled, Agent-based Discrete-event Simulation Platform for Robotic Studies: A Method based on Graph Theory](https://arxiv.org/abs/2607.16920v1)
+
+`#bim-robotics` `#agent-based-simulation` `#knowledge-driven-systems` `#cross-domain-integration`
+
+**[keep]** 新穎 6.0 / 跨域 7.0 · 2026-07-18 · Ping Xu, Xinghua Gao
+
+- **研究問題**:如何利用建築資訊模型 (BIM) 中豐富的語意與幾何資訊，建立一個知識驅動的代理人基模擬平台，以改善室內機器人處理複雜設施管理任務時的導航與規劃能力？
+- **相關理論**:本文試圖將機器人導航從傳統依賴即時感測的「感知驅動」(如 SLAM) 典範，轉移至利用既有建築數據的「知識驅動」典範，並結合代理人基模型 (ABM) 與圖論 (Graph Theory) 作為技術基礎。
+- **研究方法**:研究方法是將 BIM 模型中的室內環境離散化為網格，映射為圖結構的節點 (區分為目標、障礙或一般節點)，並依空間關係賦予邊緣成本，再應用圖論演算法計算高效且無碰撞的導航路徑。
+- **研究結論**:提出的平台證實了利用 BIM 作為先驗知識庫，能有效支持機器人進行更智能的導航與操作規劃，並提供了一個在實際部署前進行虛擬評估的環境，特別適用於複雜的設施管理任務。
+
+### [Application of Algorithms in Energy-Efficient Design Platforms for Green Building](https://arxiv.org/abs/2606.01229v1)
+
+`#building-energy-modeling` `#computational-design` `#optimization-algorithms` `#bim-integration`
+
+**[hold]** 新穎 4.0 / 跨域 5.0 · 2026-05-31 · Na Yu, Fu Wenli, Guo Fei
+
+- **研究問題**:如何構建一個整合BIM、感測器數據和演化多目標優化算法的平台，以實現綠建築設計階段的能源效率最佳化？
+- **相關理論**:本文建立在建築性能模擬(BPS)與計算性設計的基礎上，回顧了從早期單一模擬工具演進到整合BIM和參數化設計的平台，並應用了多目標優化(Multi-Objective Optimization)和代理模型(Surrogate Modeling)等演算法理論。
+- **研究方法**:開發一個多層架構平台，核心結合C++動態能源模擬模組與自適應代理模型。以一棟中層辦公樓為案例，導入感測器數據並經預處理後，進行40輪的演化多目標優化分析。
+- **研究結論**:案例研究顯示，該平台能將年每平方米能耗降低29.3% (315降至223 kWh/m²)，同時將生命週期成本增加控制在3.7%內，證明了此類演算法集成平台在技術與工程上的可行性。
+
+## 🤖 AI — 關鍵字「retrieval augmented generation」
+
+### [AILQA: Evaluating AI-Driven Legal Question Answering Systems for the Indian Legal System](https://arxiv.org/abs/2607.18825v1)
+
+`#legal-tech` `#nlp-application` `#retrieval-augmented-generation` `#ai-ethics` `#domain-specific-llm`
+
+**[keep]** 新穎 6.0 / 跨域 8.0 · 2026-07-21 · Shubham Kumar Nigam, Shubham Kumar Mishra, Noel Shallum 等
+
+- **研究問題**:如何針對複雜且多樣的印度法律環境，開發並評估一個結合檢索增強生成 (RAG) 與大型語言模型 (LLM) 的法律問答系統 (AILQA)？
+- **相關理論**:本文建立在自然語言處理 (NLP) 中的問答系統 (QA) 發展之上，特別是利用深度學習模型 (如 BERT, GPT-3) 和檢索增強生成 (RAG) 範式來處理非結構化法律文本。
+- **研究方法**:研究團隊開發了 AILQA 系統，結合多種嵌入和生成模型 (包括 LLMs)，並採用詞彙、語義指標以及法律專家的反饋進行嚴格評估，同時使用全印度律師資格考試 (AIBE) 作為基準測試。
+- **研究結論**:研究發現 RAG 範式顯著提高了複雜法律領域的回答質量，在某些情況下，AI 生成的包含詳細依據的回答甚至獲得了比參考答案更高的評價，但仍需解決上下文精確性和模型幻覺等挑戰。
+
+### [Graph-Based Agentic AI with LangGraph: Workflow Pathways for Long-Running Stateful Business Processes](https://arxiv.org/abs/2607.19297v1)
+
+`#agent-orchestration` `#workflow-automation` `#human-in-the-loop` `#langgraph` `#applied-ai`
+
+**[keep]** 新穎 5.0 / 跨域 7.0 · 2026-07-21 · Daniel Pearson, Sidney Shapiro, Emiliano Sebastian Gonzalez Venegas 等
+
+- **研究問題**:如何利用 LangGraph 框架的圖結構特性，構建長期運行、具備狀態管理且需要人工介入的複雜生成式 AI 業務流程工作流？
+- **相關理論**:本文定位為 LangGraph 的實踐指南，技術對話脈絡對比了簡單的 ReAct 迴圈、以 Schema 為主的工具使用以及專注於提示優化的 DSPy 框架，討論它們在不同工作流複雜度下的適用性。
+- **研究方法**:透過提出三個具體的可執行範例（SQL 分析修復迴圈、具備證據門檻的 Agentic RAG、以及包含中斷與檢查點恢復的人機協作政策審查），展示如何組合型別狀態、條件路由、重試和檢查點機制。
+- **研究結論**:LangGraph 並非萬用預設值，但對於需要跨步驟持久狀態、明確分支決策、失敗修復路徑、人工審查門檻或審計軌跡的複雜工作流而言，它提供了必要的治理與可視性結構。
+
+### [RF-Agent: A Practical Framework for Building Language Agents for RFIC Design](https://arxiv.org/abs/2607.18772v1)
+
+`#ai-in-engineering` `#domain-specific-llm` `#electronic-design-automation` `#knowledge-distillation`
+
+**[drop]** 新穎 7.0 / 跨域 3.0 · 2026-07-21 · Yueqi Xing, Houbo He, Jolie Wang 等
+
+- **研究問題**:如何解決大型語言模型在射頻集成電路 (RFIC) 設計領域因缺乏專用數據集和基準測試而應用受限的問題？
+- **相關理論**:論文對話於電子設計自動化 (EDA) 中應用 LLM 的趨勢，特別是針對特定領域知識不足時，採用監督微調 (SFT) 和檢索增強生成 (RAG) 進行領域適應的相關研究 (如 Chain-of-Thought distillation)。
+- **研究方法**:提出 RF-Agent 框架，利用多智能體 QTSA (問題-思考-解決方案-答案) 管道，將 7 本射頻教科書轉化為包含 11,000 多個樣本的推理數據集和選擇題基準測試，並評估了 SFT 和三種 RAG 配置的效果。
+- **研究結論**:建立了第一個開源的 RF 領域推理數據集和基準；研究發現領域特定的 SFT 顯著提高了 RF 推理能力，而在 RAG 配置中，基於語義嵌入的檢索表現最佳。
+
+## 📖 哲學 — 關鍵字「philosophy of artificial intelligence」
+
+### [The Universal Landscape of Human Reasoning](https://arxiv.org/abs/2510.21623v1)
+
+`#cognitive-science` `#ai-epistemology` `#information-theory` `#reasoning-dynamics` `#llm-as-measurement-tool`
+
+**[keep]** 新穎 9.0 / 跨域 10 · 2025-10-24 · Qiguang Chen, Jinhao Liu, Libo Qin 等
+
+- **研究問題**:如何建立一個統一的定量框架，來動態地建模和追蹤人類在不同任務中的通用推理過程及其資訊流動？
+- **相關理論**:本文對話了認知心理學中的古典邏輯、貝葉斯概率模型、心智模型理論 (Mental Models)，並試圖透過信息論視角調和認知的單一過程與雙重過程理論 (Single vs. Dual-process theories)。
+- **研究方法**:提出「信息流追蹤 (IF-Track)」方法，利用大型語言模型 (LLMs) 作為概率編碼器，估算推理每一步的條件概率，進而量化信息熵 (不確定性) 和信息增益 (認知努力)，並將其映射到一個二維的信息相空間中。
+- **研究結論**:IF-Track 成功提供了一個人類推理行為的通用定量景觀 (universal landscape)，能捕捉推理的動態特徵、識別系統性錯誤模式、表徵個體差異，並在心理學理論與測量之間建立了定量的橋樑。
+
+### [Radical AI Interpretability](https://arxiv.org/abs/2606.26523v1)
+
+`#philosophy-of-ai` `#mechanistic-interpretability` `#ai-safety` `#epistemology` `#agent-theory`
+
+**[keep]** 新穎 8.0 / 跨域 9.0 · 2026-06-25 · Daniel A. Herrmann, Benjamin A. Levinstein
+
+- **研究問題**:給定 AI 系統的計算事實，我們如何運用哲學上的「徹底詮釋」傳統結合「機械可解釋性」工具，來解析其信念、慾望和意義，並將其視為代理人(agent)？
+- **相關理論**:本書依據心靈哲學中的「徹底詮釋」(radical interpretation) 傳統 (雖未明言，但脈絡指向 Donald Davidson 等學者)，並與當前 AI 領域的「機械可解釋性」(mechanistic interpretability) 技術進行深度對話。
+- **研究方法**:作者提出了一個結合表徵主義 (representationalist) 和詮釋主義 (interpretationist) 的理論框架，並定義了相應的標準，將這些哲學標準與當前機械可解釋性方法可以執行的具體技術測試聯繫起來。
+- **研究結論**:核心結論是「整體論」(holism)：信念、慾望及其預設的命題結構受到共同約束，不能零碎地歸因；機械可解釋性技術有助於測量這些相互約束的結構。
+
+### [Intuitions of Compromise: Utilitarianism vs. Contractualism](https://arxiv.org/abs/2410.05496v1)
+
+`#ai-ethics` `#social-choice-theory` `#empirical-philosophy` `#value-alignment`
+
+**[keep]** 新穎 8.0 / 跨域 9.0 · 2024-10-07 · Jared Moore, Yejin Choi, Sydney Levine
+
+- **研究問題**:當面臨不同群體具有不同價值的折衷情境時，人們在直覺上更偏好哪種價值聚合機制：是最大化總體效益的「功利主義」路徑，還是基於協議導向的「契約主義」路徑？
+- **相關理論**:本文對比了倫理學與政治哲學中的兩大主流理論：功利主義（以效用總和最大化為代表）與契約主義（以 Nash Product 為代表），並將其置於社會選擇理論（Social Choice Theory）和社會福利函數（SWFs）的框架下討論。
+- **研究方法**:研究者設計了一個社會決策實驗，透過視覺化輔助呈現由功利主義算法和契約主義算法（Nash Product）產生的折衷提案，收集人類受試者的直覺偏好，並進一步比較大型語言模型（LLMs）的判斷與人類的異同。
+- **研究結論**:實證結果顯示，儘管功利主義常被視為預設方法，但人類強烈偏好契約主義算法建議的折衷方案；同時發現 LLM 的判斷與人類偏好在此議題上存在顯著的不對齊。
+
+## 🏙 ArchDaily 焦點建築
+
+### [Light of Amazonia Chapel / Rogoski Arquitetura](https://www.archdaily.com/1181321/light-of-amazonia-chapel-rogoski-arquitetura)
+
+**建築師**:Rogoski Arquitetura | **所在地**:Cacoal (-11.4319111, -61.45485389999999) | **機能**:religious architecture
+
+Completed in 2026 in Cacoal, Brazil. Images by Marcus Camargo. The Amazon Light Chapel was born from the client&amp;#39;s desire to create a space that would represent a &amp;quot;point of light in the Amazon.&amp;quot; Situated on the...
+
+![Light of Amazonia Chapel / Rogoski Arquitetura 1](https://images.adsttc.com/media/images/6a5e/756a/895c/1800/0111/7fb3/medium_jpg/IMG_1534.jpg)
+![Light of Amazonia Chapel / Rogoski Arquitetura 2](https://images.adsttc.com/media/images/6a5e/7613/3d21/f72b/cebb/3e95/medium_jpg/capela-luz-da-amazonia-rogoski-arquitetura_29.jpg)
+![Light of Amazonia Chapel / Rogoski Arquitetura 3](https://images.adsttc.com/media/images/6a5e/7569/895c/1800/0111/7faf/medium_jpg/IMG_1525.jpg)
+
+### [Casa Para Ver La Peña / Tenter Studio](https://www.archdaily.com/1181428/casa-para-ver-la-pena-tenter-studio)
+
+**建築師**:Tenter Studio | **所在地**:Valle de Bravo (19.1849101, -100.1512633) | **機能**:houses
+
+Completed in 2025 in Valle de Bravo, Mexico. Images by Zaickz Moz. From the street, the house appears restrained and silent. The stone volumes are barely pronounced, avoiding any emphatic gesture. The architecture...
+
+![Casa Para Ver La Peña / Tenter Studio 1](https://images.adsttc.com/media/images/6a60/5d9e/237b/e900/01c8/71b3/medium_jpg/_S__TENTER_ESTUDIO_CASA_PARA_VER_LA_PEN_A_ZAICKZ_MOZ_18.jpg)
+![Casa Para Ver La Peña / Tenter Studio 2](https://images.adsttc.com/media/images/6a60/5d9d/237b/e900/01c8/719e/medium_jpg/_S__TENTER_ESTUDIO_CASA_PARA_VER_LA_PEN_A_ZAICKZ_MOZ_01.jpg)
+![Casa Para Ver La Peña / Tenter Studio 3](https://images.adsttc.com/media/images/6a60/5d9f/237b/e900/01c8/71c2/medium_jpg/_S__TENTER_ESTUDIO_CASA_PARA_VER_LA_PEN_A_NIVEL-2.jpg)
+
+### [Leblon Apartment / Pascali Semerdjian Arquitetos](https://www.archdaily.com/1181325/leblon-apartment-pascali-semerdjian-arquitetos)
+
+**建築師**:Pascali Semerdjian Arquitetos | **所在地**:Rio de Janeiro (-22.9068467, -43.1728965) | **機能**:residential architecture
+
+Completed in 2023 in Rio de Janeiro, Brazil. Images by Fran Parente. Originally inhabited by a family, the Leblon apartment underwent a complete transformation to meet the needs of its new owner. The main objective of...
+
+![Leblon Apartment / Pascali Semerdjian Arquitetos 1](https://images.adsttc.com/media/images/6a5e/1062/895c/1800/0111/7ce3/medium_jpg/9.jpg)
+![Leblon Apartment / Pascali Semerdjian Arquitetos 2](https://images.adsttc.com/media/images/6a5e/1061/895c/1800/0111/7cdf/newsletter/5.jpg)
+![Leblon Apartment / Pascali Semerdjian Arquitetos 3](https://images.adsttc.com/media/images/6a5e/1060/895c/1800/0111/7cda/medium_jpg/1.jpg)
+
+---
+
+*由 Lab OS 自動生成|PDF/RIS 典藏見 Google Drive「LabOS文獻庫」*</script>
+<script>
+  const raw = document.getElementById('md').textContent;
+  document.getElementById('content').innerHTML = marked.parse(raw);
+</script>
+</body></html>
