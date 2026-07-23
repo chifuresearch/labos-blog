@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lab OS 研究日報 2026-07-23 · iiaHUB</title>
+<style>
+:root{color-scheme:light;--page:#f9f9f7;--surface:#fcfcfb;--ink:#0b0b0b;
+ --ink2:#52514e;--muted:#898781;--grid:#e1e0d9;--accent:#2a78d6;
+ --border:rgba(11,11,11,.1)}
+@media (prefers-color-scheme:dark){:root{color-scheme:dark;--page:#0d0d0d;
+ --surface:#1a1a19;--ink:#fff;--ink2:#c3c2b7;--muted:#898781;--grid:#2c2c2a;
+ --accent:#3987e5;--border:rgba(255,255,255,.1)}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);line-height:1.75;
+ font-family:system-ui,-apple-system,"Segoe UI","Noto Sans TC",sans-serif}
+.wrap{max-width:880px;margin:0 auto;padding:0 18px 60px}
+header.site{padding:34px 0 6px}
+header.site h1{margin:0;font-size:26px}
+header.site h1 a{color:var(--ink);text-decoration:none}
+header.site p{margin:6px 0 0;color:var(--muted);font-size:13.5px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px}
+.chip{border:1px solid var(--border);background:var(--surface);
+ color:var(--ink2);border-radius:999px;padding:3px 13px;font-size:13px;
+ cursor:pointer;user-select:none}
+.chip.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+ gap:16px;margin-top:14px}
+.card{background:var(--surface);border:1px solid var(--border);
+ border-radius:14px;overflow:hidden;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 22px rgba(0,0,0,.12)}
+.card a{color:inherit;text-decoration:none}
+.card .cover{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;
+ background:var(--grid)}
+.card .body{padding:12px 15px 15px}
+.card .date{font-size:12px;color:var(--muted)}
+.card h2{font-size:16.5px;margin:4px 0 8px;line-height:1.45}
+.card .tags{display:flex;flex-wrap:wrap;gap:5px}
+.card .tag{font-size:11px;color:var(--accent);border:1px solid var(--border);
+ border-radius:999px;padding:1px 8px}
+article{background:var(--surface);border:1px solid var(--border);
+ border-radius:16px;padding:28px clamp(18px,4vw,44px);margin-top:16px}
+article img{max-width:100%;border-radius:10px}
+article h1{font-size:26px;line-height:1.4}
+article h2{font-size:20px;border-bottom:1px solid var(--grid);
+ padding-bottom:6px;margin-top:34px}
+article h3{font-size:16.5px;margin-top:26px}
+article a{color:var(--accent)}
+article code{background:var(--page);border:1px solid var(--border);
+ border-radius:6px;padding:1px 6px;font-size:.88em}
+article blockquote{border-left:3px solid var(--accent);margin:0;
+ padding:2px 16px;color:var(--ink2)}
+.postmeta{color:var(--muted);font-size:13px;margin:14px 0 0}
+.backlink{display:inline-block;margin:22px 0 0;color:var(--accent);
+ text-decoration:none;font-size:14px}
+footer{margin-top:44px;color:var(--muted);font-size:12.5px;text-align:center}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.0/marked.min.js"></script></head>
+<body><div class="wrap">
+<header class="site"><h1><a href="../index.html">⬡ iiaHUB</a></h1></header>
+<article>
+  <div class="postmeta">2026-07-23&ensp;<span class="card">
+  </span><span class="tags" style="display:inline-flex;gap:5px"><span class="tag">#software-engineering</span> <span class="tag">#ai-for-design</span> <span class="tag">#benchmarking-methodology</span> <span class="tag">#system-reasoning</span> <span class="tag">#computer-vision</span> <span class="tag">#generative-ai</span> <span class="tag">#virtual-identity</span> <span class="tag">#3d-modeling</span> <span class="tag">#ai-in-architecture</span> <span class="tag">#generative-design</span> <span class="tag">#diffusion-models</span> <span class="tag">#sketch-interface</span></span></div>
+  <div id="content"></div>
+</article>
+<a class="backlink" href="../index.html">← 回到全部文章</a> <a class="backlink" style="float:right" href="2026-07-22.html">較舊:Lab OS 研究日報 2026-07-… →</a>
+<footer>由 Lab OS Blog Builder 自動生成</footer>
+</div>
+<script type="text/plain" id="md">![今日焦點](https://images.adsttc.com/media/images/6a5d/ec8c/e8f5/cb01/8987/a9b2/medium_jpg/casa-diez-pies-studio-font_3.jpg)
+
+# Lab OS 研究日報 2026-07-23
+
+論文 **6** 篇(keep 6 / hold 0 / drop 0)|ArchDaily 焦點建築 **3** 座
+
+## 🏛 建築 — 關鍵字「generative architectural design」
+
+### [Benchmarking Requirement-to-Architecture Generation with Hybrid Evaluation](https://arxiv.org/abs/2604.06683v2)
+
+`#software-engineering` `#ai-for-design` `#benchmarking-methodology` `#system-reasoning`
+
+**[keep]** 新穎 8.0 / 跨域 6.0 · 2026-04-08 · Minxiao Li, Li Zhang, Shuying Yan 等
+
+- **研究問題**:如何有效評估大型語言模型 (LLMs) 將軟體需求規格書 (SRS) 轉換為軟體架構視圖 (Architecture Views) 的系統級推理能力？
+- **相關理論**:論文立基於軟體工程中需求工程與軟體架構的理論 (如 Rozanski &amp; Woods 的架構視圖定義)，並對話目前生成式 AI 在單純程式碼生成之外，處理複雜系統設計的缺口。
+- **研究方法**:建立了一個包含 68 個專案（含結構化 SRS 和 PlantUML 參考架構）的基準測試庫 R2ABENCH，並設計了一套包含語法驗證、結構圖診斷和基於語義證據評分的混合評估框架來測試 SOTA LLMs。
+- **研究結論**:現有 LLMs 雖能生成語法正確的架構圖，但在關係建模（組件識別優於邊的恢復）方面表現不佳，常出現結構幻覺；且結構的忠實度並不保證對需求的覆蓋率或設計的可追溯性。
+
+### [From Architectural Sketch to Conceptual Representation: Using Structure-Aware Diffusion Model to Generate Renderings of School Buildings](https://arxiv.org/abs/2503.03090v1)
+
+`#ai-in-architecture` `#generative-design` `#diffusion-models` `#sketch-interface` `#retrieval-augmented-generation`
+
+**[keep]** 新穎 6.0 / 跨域 7.0 · 2025-03-05 · Zhengyang Wang, Hao Jin, Xusheng Du 等
+
+- **研究問題**:如何解決現有生成式 AI 在將建築草圖轉化為渲染圖時，缺乏對關鍵結構部件（如學校建築的窗戶比例）精確控制的問題？
+- **相關理論**:論文建立在潛在擴散模型 (Latent Diffusion Model, LDM) 的基礎上，並結合了檢索增強生成 (Retrieval-Augmented Generation, RAG) 的概念來改進圖像生成的細節。
+- **研究方法**:提出一種結構感知的擴散模型框架，首先從用戶草圖中提取部件區域，利用草圖檢索方法從建築部件數據集中匹配詳細組件，將其整合回草圖以補充細節，最後結合文本提示輸入模型生成圖像。
+- **研究結論**:實驗證明，結合檢索增強的建築部件數據集，能顯著提高生成學校建築圖像的準確性和真實感，更好地反映建築師的設計意圖。
+
+### [CGS-GAN: 3D Consistent Gaussian Splatting GANs for High Resolution Human Head Synthesis](https://arxiv.org/abs/2505.17590v3)
+
+`#computer-vision` `#generative-ai` `#virtual-identity` `#3d-modeling`
+
+**[keep]** 新穎 7.0 / 跨域 5.0 · 2025-05-23 · Florian Barthel, Wieland Morgenstern, Paul Hinzer 等
+
+- **研究問題**:如何在不依賴「視角條件化」(view-conditioning) 的前提下，穩定訓練基於 3D 高斯潑濺 (3DGS) 的 GAN，以合成高解析度且具備嚴格 3D 一致性的人頭模型？
+- **相關理論**:本文對話於 3D 生成模型領域，特別是針對基於神經輻射場 (NeRF) 的 GANs 以及最新的 3D 高斯潑濺 (3DGS) 方法 (如 GSGAN, GGHead) 所面臨的視角依賴性與訓練不穩定性問題。
+- **研究方法**:提出 CGS-GAN 架構，引入輕量級的「多視角正則化」技術來穩定訓練並促進幾何一致性，設計了高效的生成器以支持高達 2048x2048 解析度，並建立了一個新的高質量 FFHQ 衍生數據集進行評估。
+- **研究結論**:CGS-GAN 成功實現了無需視角條件化的高質量 3D 人頭合成，確保了模型在不同視角下的身份和幾何一致性，使生成的資產能直接應用於遊戲引擎或 VR 環境。
+
+## 🤖 AI — 關鍵字「vision language model」
+
+### [ENTRAP-VL: A Taxonomic Probe for Dual Contextual Entrainment in Vision-Language Models](https://arxiv.org/abs/2607.20092v1)
+
+`#vlm-evaluation` `#ai-robustness` `#multimodal-grounding` `#epistemology-of-ai`
+
+**[keep]** 新穎 8.0 / 跨域 7.0 · 2026-07-22 · Karan Goyal, Afreen Hossain, Debojyoti Das 等
+
+- **研究問題**:如何有系統地評估視覺語言模型 (VLMs) 中的「雙重情境牽引」(dual contextual entrainment) 現象，即模型輸出受無關或錯誤的文字/視覺輔助情境影響的傾向？
+- **相關理論**:延伸了單模態語言模型中的「情境牽引」(contextual entrainment) 理論 (如 Niu et al. [15])，並將其擴展到多模態領域，強調視覺與文字情境的獨立影響及新的真實性區辨 (veracity distinction)。
+- **研究方法**:提出一個名為 ENTRAP-VL 的分類學探針工具與資料集，包含 1500 個手工策劃的項目，涵蓋文字與視覺兩種牽引流，並依據情境關聯性與真實性關係進行分類。
+- **研究結論**:認為研究 VLM 的牽引現象需要專門的雙模態工具，因為它涉及文字與視覺的雙重驅動，以及知覺接地 (perceptual grounding) 特有的真實性區辨；並提供了相應的資料集與分類法供社群使用。
+
+### [SeededGrasp: Language-Guided Grasping in Complex Scenes with Multiple Embodiments](https://arxiv.org/abs/2607.20207v1)
+
+`#robotics` `#vision-language-models` `#embodied-ai` `#grasp-synthesis`
+
+**[keep]** 新穎 8.0 / 跨域 6.0 · 2026-07-22 · Yang Xu, Gurpreet Singh Mukker, Raymond Wang 等
+
+- **研究問題**:如何在複雜雜亂的場景中，讓機器人根據自然語言指令，使用不同類型的末端執行器（多具身）進行有效的抓取，同時避免昂貴的端到端訓練？
+- **相關理論**:本文對話於視覺語言模型 (VLMs) 在機器人操作中的應用文獻，試圖解決現有 VLM 方法缺乏精確空間感知或訓練成本過高的問題；技術上結合了流匹配 (flow matching) 生成模型。
+- **研究方法**:提出 SeededGrasp 架構，將高層語義推理與低層幾何執行解耦。利用 VLM 根據語言指令零樣本預測目標物體上的「種子點」，再以此點為條件，訓練輕量級的流匹配模型來生成適用於特定夾爪的抓取姿態。並建立了一個新的多具身雜亂場景抓取數據集。
+- **研究結論**:SeededGrasp 透過種子點機制成功解耦了語義與幾何，在模擬與真實環境中實現了高效的語言引導多具身抓取，性能優於現有基準，並證明了其數據效率。
+
+### [Test-Time Training for Modality Order Consistency in Vision-Language Models](https://arxiv.org/abs/2607.20351v1)
+
+`#ai-robustness` `#multimodal-learning` `#representation-alignment` `#test-time-adaptation`
+
+**[keep]** 新穎 7.0 / 跨域 4.0 · 2026-07-22 · Aditi Gupta, Yossi Gandelsman
+
+- **研究問題**:視覺語言模型 (VLMs) 為何對輸入模態的順序（圖像優先 vs. 問題優先）敏感，以及如何透過測試時訓練來修正這種語意無關但導致效能差異的不一致性？
+- **相關理論**:本文對話於多模態學習中的表徵對齊問題，並延伸了測試時適應 (Test-Time Adaptation/Training) 的技術脈絡，特別是針對大型模型的無監督適應方法。
+- **研究方法**:提出一種非對稱的測試時訓練方法，在推論階段將表現較好的「圖像優先」結果視為教師訊號，透過 KL 散度微調模型使另一順序向其對齊；並利用激活修補 (Activation Patching) 定位導致分歧的網路中層區域。
+- **研究結論**:VLMs 對模態順序高度敏感，且「圖像優先」表現普遍較好；提出的測試時訓練方法能有效縮小順序導致的效能差距，甚至提升原先較強分支的表現，並確認了這種失敗集中在網路中層。
+
+## 🏙 ArchDaily 焦點建築
+
+### [Casa Diez Pies / Studio Font](https://www.archdaily.com/1181260/casa-diez-pies-studio-font)
+
+**建築師**:Studio Font | **所在地**:Mazunte (15.6675884, -96.5536552) | **機能**:houses
+
+Completed in 2025 in Mazunte, Mexico. Images by Albers Studio. Site and landscape - Casa Diez Pies is conceived as a puzzle resolved with a single piece: a module repeated four times and offset by 50 cm in plan...
+
+![Casa Diez Pies / Studio Font 1](https://images.adsttc.com/media/images/6a5d/ec8c/e8f5/cb01/8987/a9b2/medium_jpg/casa-diez-pies-studio-font_3.jpg)
+![Casa Diez Pies / Studio Font 2](https://images.adsttc.com/media/images/6a5d/ec83/e8f5/cb01/8987/a9ae/newsletter/casa-diez-pies-studio-font_12.jpg)
+![Casa Diez Pies / Studio Font 3](https://images.adsttc.com/media/images/6a5d/ec95/3d21/f701/89c9/3021/medium_jpg/casa-diez-pies-studio-font_18.jpg)
+
+### [Casa Arbo Residential Building / Perkins&amp;Will](https://www.archdaily.com/1181366/casa-arbo-perkins-and-will)
+
+**建築師**:Perkins&amp;Will | **所在地**:São Paulo (-23.5924456, -46.7152497) | **機能**:residential architecture
+
+Completed in 2026 in São Paulo, Brazil. Images by Pedro Mascaro. On a quiet, tree-lined street in a neighborhood that preserves a significant part of São Paulo&amp;#39;s residential tradition, Casa Arbo emerges from a...
+
+![Casa Arbo Residential Building / Perkins&amp;Will 1](https://images.adsttc.com/media/images/6a5f/6012/895c/1800/0111/8236/medium_jpg/DJI_20260526171246_0883_D_copiar.jpg)
+![Casa Arbo Residential Building / Perkins&amp;Will 2](https://images.adsttc.com/media/images/6a5f/6011/895c/1800/0111/8222/medium_jpg/_675A0234_copiar.jpg)
+![Casa Arbo Residential Building / Perkins&amp;Will 3](https://images.adsttc.com/media/images/6a5f/6013/895c/1800/0111/823a/medium_jpg/CASA_ARBO_-_Floor_Plan_-_Ground_floor_copiar.jpg)
+
+### [Carla Ridge House / Montalba Architects](https://www.archdaily.com/1181419/carla-ridge-house-montalba-architects)
+
+**建築師**:Montalba Architects | **所在地**:Beverly Hills (34.0696501, -118.3963062) | **機能**:houses
+
+Completed in 2023 in Beverly Hills, United States. Images by Kevin Scott. Overlooking Beverly Hills, this single-story residence offers unique views of the hillside, valley and expanding city beyond. The home seamlessly...
+
+![Carla Ridge House / Montalba Architects 1](https://images.adsttc.com/media/images/6a5f/d2f5/d7be/a801/8b1f/c7d7/medium_jpg/carla-ridge-house-montalba-architects_6.jpg)
+![Carla Ridge House / Montalba Architects 2](https://images.adsttc.com/media/images/6a5f/d2f6/d7be/a80c/5df4/300f/newsletter/carla-ridge-house-montalba-architects_11.jpg)
+![Carla Ridge House / Montalba Architects 3](https://images.adsttc.com/media/images/6a5f/d2f9/d7be/a801/8b1f/c7db/medium_jpg/02-carla-ridge-floor-plan-1.jpg)
+
+---
+
+*由 Lab OS 自動生成|PDF/RIS 典藏見 Google Drive「LabOS文獻庫」*</script>
+<script>
+  const raw = document.getElementById('md').textContent;
+  document.getElementById('content').innerHTML = marked.parse(raw);
+</script>
+</body></html>
